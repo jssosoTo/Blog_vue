@@ -10,10 +10,12 @@ import Footer from "../../components/Footer.vue";
     <section
       class="flex flex-col items-center animate__animated animate__fadeInDown"
     >
-      <ElAvatar
-        class="header-avatar animate__bounceIn"
-        :src="'https://avatars.githubusercontent.com/u/101981442?v=4'"
-      />
+      <div class="wave-animation-fast border-white border-2 avatar-container">
+        <ElAvatar
+          class="header-avatar animate__bounceIn wave-animation"
+          :src="'https://avatars.githubusercontent.com/u/101981442?v=4'"
+        />
+      </div>
       <h2 class="hi">Hi, I'm <span class="hi-name">P0PC0RN SU</span></h2>
       <h4 class="job">Frontend Developer</h4>
     </section>
@@ -55,6 +57,29 @@ import Footer from "../../components/Footer.vue";
   }
 }
 
+@keyframes wave {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+  }
+}
+
+.wave-animation-fast {
+  animation: wave 5s ease-in infinite;
+
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation-delay: 1s;
+}
+
+.wave-animation {
+  animation: wave 5s ease-out infinite;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 .hint-arrow {
   animation: translate-text 1s linear infinite alternate;
 }
@@ -67,7 +92,7 @@ import Footer from "../../components/Footer.vue";
     #348300,
     rgb(30, 101, 0)
   );
-  height: 92vh;
+  height: 94vh;
   background-size: 400%;
   background-position: 0%;
   animation: fadeBG 12s linear infinite;
@@ -79,10 +104,13 @@ import Footer from "../../components/Footer.vue";
   clear: both;
 }
 
+.avatar-container {
+  margin-top: 20vh;
+}
+
 .header-avatar {
   width: 15rem;
   height: 15rem;
-  margin-top: 4rem;
 }
 
 .hi {

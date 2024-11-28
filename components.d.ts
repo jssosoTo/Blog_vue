@@ -7,6 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElRow: typeof import('element-plus/es')['ElRow']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Github: typeof import('./src/components/Github.vue')['default']
     Mail: typeof import('./src/components/Mail.vue')['default']

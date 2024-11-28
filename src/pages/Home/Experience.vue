@@ -41,6 +41,18 @@ import { ElCard, ElTimeline, ElTimelineItem } from "element-plus";
       </ElCard>
     </ElTimelineItem>
   </ElTimeline>
+  <h4 class="text-4xl mt-4 mb-4">Education</h4>
+  <ElTimeline class="experience">
+    <ElTimelineItem center timestamp="2020-10 - 2024-06" placement="top">
+      <ElCard>
+        <h4 class="text-xl">YanGo University</h4>
+        <p class="text-lime-600">Bachelor of Science</p>
+        <ul>
+          <li>Computer Science</li>
+        </ul>
+      </ElCard>
+    </ElTimelineItem>
+  </ElTimeline>
 </template>
 
 <style scoped>
