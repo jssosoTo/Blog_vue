@@ -17,7 +17,7 @@ import { ElCard, ElTimeline, ElTimelineItem } from "element-plus";
         </ul>
       </ElCard>
     </ElTimelineItem>
-    <ElTimelineItem center timestamp="2023-07 - 2023-06" placement="top">
+    <ElTimelineItem center timestamp="2023-07 - 2024-06" placement="top">
       <ElCard>
         <h4 class="text-xl">Frontend Developer(intern)</h4>
         <p class="text-lime-600">Fuzhou Tastien</p>
@@ -28,7 +28,7 @@ import { ElCard, ElTimeline, ElTimelineItem } from "element-plus";
         </ul>
       </ElCard>
     </ElTimelineItem>
-    <ElTimelineItem center timestamp="2023-07 - 2023-06" placement="top">
+    <ElTimelineItem center timestamp="2022-02 - 2023-07" placement="top">
       <ElCard>
         <h4 class="text-xl">Freelancer Frontend Developer</h4>
         <p class="text-lime-600">Self-employed</p>
