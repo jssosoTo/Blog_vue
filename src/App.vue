@@ -44,11 +44,11 @@ const translator = languageStore.translator;
                 :class="[$route.path === '/projects' && 'activeLink']"
                 >{{ translator.routers.projects }}</RouterLink
               >
-              <RouterLink
+              <!-- <RouterLink
                 to="/contact"
                 :class="[$route.path === '/contact' && 'activeLink']"
                 >{{ translator.routers.contact }}</RouterLink
-              >
+              > -->
 
               <ElSwitch
                 v-model="themeStore.isLight"

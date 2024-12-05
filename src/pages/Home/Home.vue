@@ -3,6 +3,8 @@ import { Bottom } from "@element-plus/icons-vue";
 import { ElAvatar, ElIcon } from "element-plus";
 import About from "./About.vue";
 import Footer from "../../components/Footer.vue";
+import Github from "../../components/Github.vue";
+import Mail from "../../components/Mail.vue";
 </script>
 
 <template>
@@ -16,8 +18,24 @@ import Footer from "../../components/Footer.vue";
           :src="'https://avatars.githubusercontent.com/u/101981442?v=4'"
         />
       </div>
-      <h2 class="hi">Hi, I'm <span class="hi-name">P0PC0RN SU</span></h2>
+      <h2 class="hi">
+        <span class="text">Hi, I'm P0PC0RN SU</span>
+      </h2>
       <h4 class="job">Frontend Developer</h4>
+      <section class="flex gap-4 mt-4 border rounded-3xl px-4 py-2">
+        <a
+          class="cursor-pointer text-white"
+          target="_blank"
+          href="https://github.com/jssosoTo"
+          ><Github
+        /></a>
+        <a
+          class="cursor-pointer text-white"
+          target="_blank"
+          href="mailTo:2982538245@qq.com"
+          ><Mail
+        /></a>
+      </section>
     </section>
     <div
       class="absolute bottom-4 left-1/2 -translate-x-1/2 text-4xl text-white hint-arrow"
@@ -113,12 +131,54 @@ import Footer from "../../components/Footer.vue";
   height: 15rem;
 }
 
+@keyframes textTap {
+  from {
+    width: 14ch;
+  }
+  to {
+    width: 1ch;
+  }
+}
+
+@keyframes breath {
+  from {
+    width: 4px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
 .hi {
   margin-top: 0.4rem;
   color: white;
+  text-align: center;
   font-size: 3rem;
+  width: 100%;
   font-family: "Edu AU VIC WA NT Arrows", cursive;
 }
+
+.hi .text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-wrap: nowrap;
+  width: 14ch;
+  animation: textTap 3s steps(13) infinite alternate-reverse;
+}
+
+.hi .text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2px;
+  height: 80%;
+  width: 4px;
+  animation: breath 0.6s steps(2) infinite;
+  background-color: #409eff;
+}
+
 .hi-name {
   color: #409eff;
 }
